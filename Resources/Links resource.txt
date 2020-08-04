@@ -1,0 +1,7 @@
+https://www.hackster.io/hieromon-ikasamo/esp8266-esp32-connect-wifi-made-easy-d75f45
+wlan verbinden
+https://randomnerdtutorials.com/esp32-date-time-ntp-client-server-arduino/
+Time
+https://www.wir-machen-druck.de/acrylglasplatte-mit-freier-groesse-rechteckig-einseitig-40farbig-bedruckt.html#content-view
+Faceplate
+https://marcosprojects.wordpress.com/2018/12/24/esp8266-wifi-wordclock/
