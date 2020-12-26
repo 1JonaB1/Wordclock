@@ -21,8 +21,12 @@ AutoConnectConfig config;
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 3600;
 const int   daylightOffset_sec = 3600;
-int brightnessvalue = 800;
+int brightnessvalue = 400;
+int brightness_max = 200;
+int brightness_min = 30;
 int lightstate;
+int brightness_last = brightness_min;
+float light; 
 
 
 
@@ -469,28 +473,45 @@ void setup() {
   
 }
 
- void dimmen() {
-  int light = analogRead(lightSensor);  
-  if((lightstate != 0 ) && (light < brightnessvalue))
-  {
+void dimmen() {
+  int light_in = analogRead(lightSensor);
+  float light_new = light_in *1.0;
+  float temp = 0.0;
+  int i = 0;
 
-    for (int i = 255; i > 60; i--){
-      FastLED.setBrightness(i);
-      FastLED.show();
-      delay(15);
-    }
-    lightstate = 0;}
 
-  else if ((lightstate != 1 ) && (light > brightnessvalue))
-  {
-    for (int i = 60; i < 210; i++){
-    FastLED.setBrightness(i);
-    FastLED.show();
-    delay(15);}
-    lightstate = 1;
-  }
+  light = light + (light_new -light)*0.001;
 
+// normalize light to values between 0 and 1 (0 = dunkel 1 = hell)
+temp = light /2000.0;
+if (temp>1.0) temp=1.0;
+
+//calculate new brightness 
+ i = temp * (brightness_max - brightness_min) + brightness_min;
+// write new Brightness
+ if (i<brightness_last-2 || i >brightness_last+2){
+ FastLED.setBrightness(i);
+ FastLED.show();
+ brightness_last = i;}
 }
+ // if((lightstate != 0 ) && (light < brightnessvalue))
+ // {
+//       for (int i = brightness_max; i > brightness_min; i--){
+//      FastLED.setBrightness(i);
+//      FastLED.show();
+//      delay(15);
+//    }
+//    lightstate = 0;}
+
+//  else if ((lightstate != 1 ) && (light > brightnessvalue))
+//  {
+//    for (int i = brightness_min; i < brightness_max; i++){
+//    FastLED.setBrightness(i);
+//    FastLED.show();
+//    delay(15);}
+//    lightstate = 1;
+//  }
+
 
 void loop() {
   portal.handleClient();
