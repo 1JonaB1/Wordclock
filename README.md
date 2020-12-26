@@ -6,10 +6,9 @@ Features:
 - Confiurable over Webinterface
 - OTA Updates in the Webinterface 
 - No need for Hardcoding credentials
-- Smooth Dimming
+- Smooth Dimming which is stepless
 
 Plans for the Future:
-- Dimming without steps (calculate best brightness)
 - change LED color and other thinks over Webinterface 
 - Photoresistor calibration
 
