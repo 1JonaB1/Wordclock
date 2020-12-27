@@ -9,7 +9,7 @@ Features:
 - Smooth Dimming which is stepless
 
 Plans for the Future:
-- change LED color and other thinks over Webinterface 
+- change LED color and other things over Webinterface 
 - Photoresistor calibration
 
 
