@@ -1,5 +1,5 @@
 # Wordclock
-My cheap Diy Wordclock with an Esp32 and WS2812b leds 
+Diy Wordclock with an Esp32 and WS2812b leds.
 
 Features: 
 - Time from ntp server
