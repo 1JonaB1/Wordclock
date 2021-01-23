@@ -11,6 +11,8 @@ Features:
 Plans for the Future:
 - change LED color and other things over Webinterface 
 - Photoresistor calibration
+- dcf 77 support 
+- sk6812 rgbw support
 
 
 Tipps for building:
