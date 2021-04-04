@@ -9,11 +9,9 @@ Features:
 - Smooth Dimming which is stepless
 
 Plans for the Future:
-- change LED color and other things over Webinterface 
+- change LED color etc. over Webinterface 
 - Photoresistor calibration
-- dcf 77 support 
 - sk6812 rgbw support
-
 
 Tipps for building:
 
