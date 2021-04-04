@@ -20,6 +20,9 @@ The Build is somehow simple. You can use my PCB with an Esp32 and a levelshifter
 and build an enclousure for it.
 You can also build it with led strips which start at the top left and go in snakelines down(11rows wit 10 colums)first cornerled is the top right and then Corner under it then the Led down right and then top left(just look at the PCB). Connect the Strip with an Levelshifter to pin 23 of the Arduino and the Photoresistor to pin 34.
 
+## How to Open the Sketch:
+You can open the Folder Wordclock which is in Firmware/Code with Platform.io or rename the code main.cpp in  Firmware/Code/Wordclock/src to main.ino  and open it with the Arduino IDE. However the libarys need to be installed manually.
+
 ## How to Customize:
 **Currently all customisation needs a bit of research, however i want to make it easier in the Future.**
 ### Time
