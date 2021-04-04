@@ -1,0 +1,8 @@
+  
+{
+    "type": "Wordclock_stable",
+    "version": 1,
+    "host": "raw.githubusercontent.com",
+    "port": 443,
+    "bin": "na"
+}
