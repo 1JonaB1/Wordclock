@@ -11,7 +11,7 @@ Diy Wordclock with an Esp32 and smart leds like ws2812b.
 ## Plans for the Future:
 - change LED color etc. over Webinterface 
 - Photoresistor calibration
-- sk6812 rgbw support
+- sk6812 rgbw support (allready tested with fastled now need to implement it into the code)
 - Auto Updating (almost done and getting tested)
 
 ## Status
