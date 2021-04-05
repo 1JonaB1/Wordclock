@@ -84,4 +84,5 @@ If you want to change the LED Pin, search for ``` #define DATA_PIN 23 ``` and ch
 If you want to change the Photoresistor Pin, search for ``` #define lightSensor 34 ``` and change the Pin to where your Photoresistor is connected.
 #### Correct color
 If you want to correct the Color you need to change in Setup ``` FastLED.setCorrection(CRGB(255, 255, 230)); ``` The Numbers say the Strenght of each color first is Red secong Green and third Blue. I have set Blue lower becouse i wanted a warmer White.
+
 **Contributions are Welcome and im happy to help at Issues**
