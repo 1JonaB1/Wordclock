@@ -1,8 +1,7 @@
-  
 {
-    "type": "Wordclock_stable",
-    "version": 1,
+    "type": "sk6812rgbw",
+    "version": 2,
     "host": "raw.githubusercontent.com",
     "port": 443,
-    "bin": "na"
+    "bin": "/1JonaB1/Wordclock/master/Firmware/.bin%20and%20json%20for%20AutoUpdate/sk6812rgbw.bin"
 }
