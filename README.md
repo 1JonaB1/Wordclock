@@ -31,7 +31,7 @@ You can open the Folder Wordclock which is in Firmware/Code with Platform.io or 
 ## How to Customize:
 #### if you customize the firmware, you need to set ```secureEsp32FOTA secureEsp32FOTA("sk6812rgbw", 2);``` to 99 so you wont get OTA updates or create your own Type as update branch, so OTAs work (pls. refer to OTA update)
 
-**If the Documentation is unclear pls ask, becouse i also know it is bad (:*
+**If the Documentation is unclear pls ask, becouse i also know the Documentation is bad (:**
 
 **Currently all customisation needs a bit of research, however i want to make it easier in the Future.**
 #### Time
