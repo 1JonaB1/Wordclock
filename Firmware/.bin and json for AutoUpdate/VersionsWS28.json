@@ -1,0 +1,7 @@
+{
+  "type": "ws2812b",
+  "version": 3,
+  "host": "raw.githubusercontent.com",
+  "port": 443,
+  "bin": "/1JonaB1/Wordclock/master/Firmware/.bin%20and%20json%20for%20AutoUpdate/ws2812b.bin"
+}
