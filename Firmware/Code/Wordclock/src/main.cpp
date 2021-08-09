@@ -9,8 +9,8 @@
 #include <Adafruit_NeoPixel.h>
 
 
-#define Neopixel
-//#define FastLED
+//#define Neopixel
+#define FastLED1
 
 //Autoconnect dependencys
 #if defined(ARDUINO_ARCH_ESP8266)
@@ -89,20 +89,20 @@ char* test_root_ca= \
   "-----END CERTIFICATE-----\n" ;
 
 WiFiClientSecure clientForOta;
-secureEsp32FOTA secureEsp32FOTA("sk6812rgbw", 2);
+secureEsp32FOTA secureEsp32FOTA("ws2812b", 2);
 
 
 
 
 void setLedOn(int number){
-    #if defined(FastLED)
+    #if defined(FastLED1)
     leds[number].setHSV(H, S, V);
     #elif defined(Neopixel)
     pixels.setPixelColor(number, pixels.Color(0, 0, 0, 100));
     #endif
 }
 void setLedOff(int number){
-  #if defined(FastLED)
+  #if defined(FastLED1)
   leds[number].setHSV(0, 0, 0);
   #elif defined(Neopixel)
   pixels.setPixelColor(number, pixels.Color(0, 0, 0, 0));
@@ -131,8 +131,9 @@ void getTime()
 }
 
 void checkUpdate(){
+  Serial.println("Checking for Updates");
   secureEsp32FOTA._host="raw.githubusercontent.com";
-  secureEsp32FOTA._descriptionOfFirmwareURL="/1JonaB1/Wordclock/master/Firmware/.bin%20and%20json%20for%20AutoUpdate/Versions.json";
+  secureEsp32FOTA._descriptionOfFirmwareURL="/1JonaB1/Wordclock/master/Firmware/.bin%20and%20json%20for%20AutoUpdate/VersionsWS28.json";
   secureEsp32FOTA._certificate=test_root_ca;
   secureEsp32FOTA.clientForOta=clientForOta;
 
@@ -559,7 +560,7 @@ void displayTime()
   setLedOn(4); //S
   setLedOn(5); //T  
   
-  #if defined(FastLED)
+  #if defined(FastLED1)
   FastLED.show();   // Send the updated pixel colors to the hardware.
   #elif defined(Neopixel)
   pixels.show();   // Send the updated pixel colors to the hardware.
@@ -600,7 +601,7 @@ void setup()
 {
   Serial.begin(115200);
   //FastLED
-  #if defined(FastLED)
+  #if defined(FastLED1)
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
   FastLED.clear();
   FastLED.setCorrection(CRGB(255, 255, 230));
@@ -657,7 +658,7 @@ void brightness()
   // write new Brightness
   if (i < brightness_last - 6 || i > brightness_last + 6)
   {
-    #if defined(FastLED)
+    #if defined(FastLED1)
     FastLED.setBrightness(i);
     FastLED.show();
     #elif defined(Neopixel)
