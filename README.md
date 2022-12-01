@@ -1,5 +1,6 @@
 # Wordclock
-Diy Wordclock with an Esp32 and smart leds like ws2812b.
+Diy Wordclock with an Esp32 and smart LEDs like ws2812b.
+![20201223_222611](https://user-images.githubusercontent.com/57105059/205077834-c267bf58-da39-4d44-9e0c-c00d648075f7.jpg)
 
 ## Features: 
 - Time from ntp server
